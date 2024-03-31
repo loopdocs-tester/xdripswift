@@ -57,7 +57,7 @@ platform :ios do
       app_identifier: [
         "com.#{TEAMID}.xdripswift",
         "com.#{TEAMID}.xdripswift.xDripWidget",
-        "com.#{TEAMID}.xdripswift.watchkitapp",
+        "com.#{TEAMID}.xdripswift.xDrip4iOS-Widget",
         "com.#{TEAMID}.xdripswift.watchkitapp.xDripWatchComplication"
       ]
     )
