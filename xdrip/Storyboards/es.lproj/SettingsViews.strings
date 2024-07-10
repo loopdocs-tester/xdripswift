@@ -40,9 +40,9 @@
 "settingsviews_urgentHighValue" = "Valor de Glucemia Alta (Urgente)";
 "settingsviews_highValue" = "Valor de Glucemia Alta";
 "settingsviews_targetValue" = "Valor Objectivo";
+"settingsviews_targetValueMessage" = "Usar 0 para deshabilitar el valor objectivo en la gráfica";
 "settingsviews_lowValue" = "Valor de Glucemia Baja";
 "settingsviews_urgentLowValue" = "Valor de Glucemia Baja (Urgente)";
-"settingsviews_useobjectives" = "Mostrar Objetivos";
 "settingsviews_showcoloredobjectives" = "Mostrar Colores";
 "settingsviews_showtarget" = "Mostrar Línea Target";
 "settingsviews_sectiontitletreatments" = "Tratamientos";
@@ -141,6 +141,17 @@
 "nslog" = "NSLog";
 "developerSettings" = "Opciones de Desarrollo";
 "settingsviews_sectiontitlehomescreen" = "Inicio";
+"settingsviews_infoContactsAccessRestricted" = "No has podido dar permiso a %@ para accesar a tus contactos. Esto es probablemente debido a restriciones como el control parental o similar.";
+"settingsviews_contactImageSectionTitle" = "Imagen de Contacto";
+"settingsviews_enableContactImage" = "Crear Contacto";
+"settingsviews_displayTrendInContactImage" = "Mostrar Tendencia";
+"settingsviews_contactImageCreatedByString" = "Contacto creado automáticamente por";
+
+"appleWatchSectionTitle" = "Apple Watch";
+"appleWatchShowDataInComplications" = "Mostrar Complicaciones";
+"appleWatchShowDataInComplicationsMessage" = "Las complicaciones de Apple Watch no pueden actualizarse en tiempo-real. Solo se actualizarán 2-3 veces por hora.\n\nNO DEBES fiar de los valores mostrados a la hora de tomar decisiones.\n\nPara valores actuales y fiables, debes abrir la app de %@ en tu Watch.\n\nHaz click en 'OK' únicamente si lo has entendido y estás de acuerdo.";
+"appleWatchComplicationUserAgreementDate" = "Acuerdo del Usuario";
+"appleWatchRemainingComplicationUserInfoTransfers" = "Actualizaciones Disponibles Hoy";
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 /////   Translation needed - remove this header after translation                       /////
@@ -181,7 +192,7 @@
 "Select Time" = "Select Time";
 
 /// Settings screen for loop delay, explanatory text for value
-"expanatoryTextSelectValue" = "Delay in minutes, applied to readings shared with Loop";
+"expanatoryTextSelectValue" = "Delay in minutes, applied to readings shared with OS-AID";
 
 /// When clicking the interval setting, a pop up asks for minimum number of minutes between two calendar events, this is the pop up message - this is used for setting the interval between two calendar events, Speak readings, Apple Watch
 "settingsviews_CalenderIntervalMessage" = "Minimum interval between two calender events (mins)";
@@ -214,4 +225,4 @@
 "expanatoryTextSelectTime" = "As of what time should the value apply";
 
 /// Should loop data be shared only every 5 minutes
-"shareToLoopOnceEvery5Minutes" = "Share to Loop every 5 mins";
+"shareToLoopOnceEvery5Minutes" = "Share with OS-AID every 5 mins";

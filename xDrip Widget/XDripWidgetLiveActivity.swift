@@ -10,7 +10,6 @@ import ActivityKit
 import WidgetKit
 import SwiftUI
 
-@available(iOSApplicationExtension 16.2, *)
 struct XDripWidgetLiveActivity: Widget {
     
     var body: some WidgetConfiguration {
@@ -49,7 +48,7 @@ struct XDripWidgetLiveActivity: Widget {
                         
                         Text(context.state.bgUnitString)
                             .font(.title)
-                            .foregroundStyle(Color(white: 0.5))
+                            .foregroundStyle(.colorTertiary)
                             .minimumScaleFactor(0.2)
                             .lineLimit(1)
                     }
@@ -78,14 +77,14 @@ struct XDripWidgetLiveActivity: Widget {
                             
                             Text(context.state.bgUnitString)
                                 .font(.system(size: 20))
-                                .foregroundStyle(Color(white: 0.5))
+                                .foregroundStyle(.colorTertiary)
                                 .minimumScaleFactor(0.2)
                                 .lineLimit(1)
                         }
                     }
                     
                     ZStack {
-                        GlucoseChartView(glucoseChartType: .liveActivity, bgReadingValues: context.state.bgReadingValues, bgReadingDates: context.state.bgReadingDates, isMgDl: context.state.isMgDl, urgentLowLimitInMgDl: context.state.urgentLowLimitInMgDl, lowLimitInMgDl: context.state.lowLimitInMgDl, highLimitInMgDl: context.state.highLimitInMgDl, urgentHighLimitInMgDl: context.state.urgentHighLimitInMgDl, liveActivitySize: .normal, hoursToShowScalingHours: nil, glucoseCircleDiameterScalingHours: nil, overrideChartHeight: nil, overrideChartWidth: nil)
+                        GlucoseChartView(glucoseChartType: .liveActivity, bgReadingValues: context.state.bgReadingValues, bgReadingDates: context.state.bgReadingDates, isMgDl: context.state.isMgDl, urgentLowLimitInMgDl: context.state.urgentLowLimitInMgDl, lowLimitInMgDl: context.state.lowLimitInMgDl, highLimitInMgDl: context.state.highLimitInMgDl, urgentHighLimitInMgDl: context.state.urgentHighLimitInMgDl, liveActivitySize: .normal, hoursToShowScalingHours: nil, glucoseCircleDiameterScalingHours: nil, overrideChartHeight: nil, overrideChartWidth: nil, highContrast: nil)
                         
                         if context.state.warnUserToOpenApp {
                             VStack(alignment: .center) {
@@ -130,7 +129,7 @@ struct XDripWidgetLiveActivity: Widget {
                                     .lineLimit(1)
                                 Text(context.state.bgUnitString)
                                     .font(.system(size: 28))
-                                    .foregroundStyle(.gray)
+                                    .foregroundStyle(.colorTertiary)
                                     .lineLimit(1)
                             }
                         }
@@ -139,20 +138,20 @@ struct XDripWidgetLiveActivity: Widget {
                         .padding(.leading, 15)
                         .padding(.trailing, 15)
                         
-                        GlucoseChartView(glucoseChartType: .liveActivity, bgReadingValues: context.state.bgReadingValues, bgReadingDates: context.state.bgReadingDates, isMgDl: context.state.isMgDl, urgentLowLimitInMgDl: context.state.urgentLowLimitInMgDl, lowLimitInMgDl: context.state.lowLimitInMgDl, highLimitInMgDl: context.state.highLimitInMgDl, urgentHighLimitInMgDl: context.state.urgentHighLimitInMgDl, liveActivitySize: .large, hoursToShowScalingHours: nil, glucoseCircleDiameterScalingHours: nil, overrideChartHeight: nil, overrideChartWidth: nil)
+                        GlucoseChartView(glucoseChartType: .liveActivity, bgReadingValues: context.state.bgReadingValues, bgReadingDates: context.state.bgReadingDates, isMgDl: context.state.isMgDl, urgentLowLimitInMgDl: context.state.urgentLowLimitInMgDl, lowLimitInMgDl: context.state.lowLimitInMgDl, highLimitInMgDl: context.state.highLimitInMgDl, urgentHighLimitInMgDl: context.state.urgentHighLimitInMgDl, liveActivitySize: .large, hoursToShowScalingHours: nil, glucoseCircleDiameterScalingHours: nil, overrideChartHeight: nil, overrideChartWidth: nil, highContrast: nil)
                         
                         HStack {
                             Text(context.state.dataSourceDescription)
                                 .font(.caption).bold()
-                                .foregroundStyle(Color(white: 0.8))
+                                .foregroundStyle(.colorSecondary)
                             
                             Spacer()
                             
                             Text("Last reading at \(context.state.bgReadingDate?.formatted(date: .omitted, time: .shortened) ?? "--:--")")
                                 .font(.caption)
-                                .foregroundStyle(Color(white: 0.6))
+                                .foregroundStyle(.colorTertiary)
                         }
-                        .padding(.top, 2)
+                        .padding(.top, 6)
                         .padding(.bottom, 10)
                         .padding(.leading, 15)
                         .padding(.trailing, 15)
@@ -194,14 +193,14 @@ struct XDripWidgetLiveActivity: Widget {
                         
                         Text(context.state.bgUnitString)
                             .font(.title)
-                            .foregroundStyle(Color(white: 0.5))
+                            .foregroundStyle(.colorSecondary)
                             .minimumScaleFactor(0.2)
                             .lineLimit(1)
                     }
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .center)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    GlucoseChartView(glucoseChartType: .dynamicIsland, bgReadingValues: context.state.bgReadingValues, bgReadingDates: context.state.bgReadingDates, isMgDl: context.state.isMgDl, urgentLowLimitInMgDl: context.state.urgentLowLimitInMgDl, lowLimitInMgDl: context.state.lowLimitInMgDl, highLimitInMgDl: context.state.highLimitInMgDl, urgentHighLimitInMgDl: context.state.urgentHighLimitInMgDl, liveActivitySize: nil, hoursToShowScalingHours: nil, glucoseCircleDiameterScalingHours: nil, overrideChartHeight: nil, overrideChartWidth: nil)
+                    GlucoseChartView(glucoseChartType: .dynamicIsland, bgReadingValues: context.state.bgReadingValues, bgReadingDates: context.state.bgReadingDates, isMgDl: context.state.isMgDl, urgentLowLimitInMgDl: context.state.urgentLowLimitInMgDl, lowLimitInMgDl: context.state.lowLimitInMgDl, highLimitInMgDl: context.state.highLimitInMgDl, urgentHighLimitInMgDl: context.state.urgentHighLimitInMgDl, liveActivitySize: nil, hoursToShowScalingHours: nil, glucoseCircleDiameterScalingHours: nil, overrideChartHeight: nil, overrideChartWidth: nil, highContrast: nil)
                 }
             } compactLeading: {
                 Text("\(context.state.bgValueStringInUserChosenUnit)\(context.state.trendArrow())")
@@ -209,6 +208,7 @@ struct XDripWidgetLiveActivity: Widget {
                     .minimumScaleFactor(0.1)
             } compactTrailing: {
                 Text(context.state.deltaChangeStringInUserChosenUnit())
+                    .foregroundStyle(context.state.deltaChangeTextColor())
                     .minimumScaleFactor(0.1)
             } minimal: {
                 Text("\(context.state.bgValueStringInUserChosenUnit)")
@@ -221,7 +221,6 @@ struct XDripWidgetLiveActivity: Widget {
     }
 }
 
-@available(iOS 16.2, *)
 struct XDripWidgetLiveActivity_Previews: PreviewProvider {
     
     // generate some random dates for the preview

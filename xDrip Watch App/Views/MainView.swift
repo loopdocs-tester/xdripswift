@@ -38,7 +38,7 @@ struct MainView: View {
                         watchState.requestWatchStateUpdate()
                     }
                 
-                GlucoseChartView(glucoseChartType: .watchApp, bgReadingValues: watchState.bgReadingValues, bgReadingDates: watchState.bgReadingDates, isMgDl: watchState.isMgDl, urgentLowLimitInMgDl: watchState.urgentLowLimitInMgDl, lowLimitInMgDl: watchState.lowLimitInMgDl, highLimitInMgDl: watchState.highLimitInMgDl, urgentHighLimitInMgDl: watchState.urgentHighLimitInMgDl, liveActivitySize: nil, hoursToShowScalingHours: hoursToShow[hoursToShowIndex], glucoseCircleDiameterScalingHours: 4, overrideChartHeight: overrideChartHeight, overrideChartWidth: overrideChartWidth)
+                GlucoseChartView(glucoseChartType: .watchApp, bgReadingValues: watchState.bgReadingValues, bgReadingDates: watchState.bgReadingDates, isMgDl: watchState.isMgDl, urgentLowLimitInMgDl: watchState.urgentLowLimitInMgDl, lowLimitInMgDl: watchState.lowLimitInMgDl, highLimitInMgDl: watchState.highLimitInMgDl, urgentHighLimitInMgDl: watchState.urgentHighLimitInMgDl, liveActivitySize: nil, hoursToShowScalingHours: hoursToShow[hoursToShowIndex], glucoseCircleDiameterScalingHours: 4, overrideChartHeight: overrideChartHeight, overrideChartWidth: overrideChartWidth, highContrast: nil)
                     .gesture(
                         DragGesture(minimumDistance: 80, coordinateSpace: .local)
                             .onEnded({ value in
@@ -66,7 +66,7 @@ struct MainView: View {
                     .font(.system(size: isSmallScreen ? 12 : 14))
                     .multilineTextAlignment(.leading)
                     .padding(EdgeInsets(top: 5, leading: 5, bottom: 5, trailing: 5))
-                    .background(.teal).opacity(0.85)
+                    .background(.teal).opacity(0.9)
                     .cornerRadius(8)
             }
         })
